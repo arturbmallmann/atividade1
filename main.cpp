@@ -5,12 +5,14 @@ int main(){
 	char* host = new char[255];
 	char* cwd = new char[255];
 	string comando;
+	string entrada;
 	user=getlogin();
 	gethostname(host,255);
 	while (true){
 		getcwd(cwd,255);
 		std::cout<<user<<"@"<<host<<":"<<cwd<<"$ ";
-		std::cin>>comando;
+		getline(cin, comando);
+		//std::cin>>entrada;
 		executar(comando);
 	}
 }
