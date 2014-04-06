@@ -8,11 +8,11 @@ int main(){
 	string entrada;
 	user=getlogin();
 	gethostname(host,255);
-	while (true){
+	int loop=0;
+	while (loop!=-1){
 		getcwd(cwd,255);
 		std::cout<<user<<"@"<<host<<":"<<cwd<<"$ ";
 		getline(cin, comando);
-		//std::cin>>entrada;
-		executar(comando);
+		loop = executar(comando);
 	}
 }
