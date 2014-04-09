@@ -9,6 +9,7 @@ int main(){
 	user=getlogin();
 	gethostname(host,255);
 	int loop=0;
+	help();
 	while (loop!=-1){
 		getcwd(cwd,255);
 		std::cout<<user<<"@"<<host<<":"<<cwd<<"$ ";
